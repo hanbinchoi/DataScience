@@ -93,34 +93,45 @@ for i in range(len(bmi)):
 #Box Plot_weight
 plotData=[underweight_weight,healthy_weight,overweight_weight,obese_weight]
 plt.boxplot(plotData)
+plt.xticks([1,2,3,4],["underweight","healthy","overweight","obese"])
 plt.xlabel('BMI level')
-plt.ylabel('weight')
+plt.ylabel('weight(kg)')
 plt.title('Box_Plot(weight)')
 plt.show()
 
 #Box Plot_height
 plotData=[underweight_height,healthy_height,overweight_height,obese_height]
 plt.boxplot(plotData)
+plt.xticks([1,2,3,4],["underweight","healthy","overweight","obese"])
 plt.xlabel('BMI level')
-plt.ylabel('height')
+plt.ylabel('height(cm)')
 plt.title('Box_Plot(height)')
 plt.show()
 
-#histogram_weight
-plt.hist([underweight_weight,healthy_weight,overweight_weight,obese_weight],bins=4)
-plt.title('BMI histogram(weight)')
-plt.xlabel('weight')
-plt.ylabel('number of student')
-plt.legend(category)
+
+#Histogram
+plt.hist(underweight_height,bins=10)
+plt.title("underweight")
+plt.xlabel("Height (cm)")
+plt.ylabel("Number of students")
 plt.show()
 
-#histogram_height
-plt.hist([underweight_height,healthy_height,overweight_height,obese_height],bins=4,
-         label=category)
-plt.title('BMI histogram(height)')
-plt.xlabel('height')
-plt.ylabel('number of student')
-plt.legend(category)
+plt.hist(healthy_height,bins=10)
+plt.title("healthy")
+plt.xlabel("Height (cm)")
+plt.ylabel("Number of students")
+plt.show()
+
+plt.hist(overweight_height,bins=10)
+plt.title("overweight")
+plt.xlabel("Height (cm)")
+plt.ylabel("Number of students")
+plt.show()
+
+plt.hist(obese_height,bins=10)
+plt.title("obese")
+plt.xlabel("Height (cm)")
+plt.ylabel("Number of students")
 plt.show()
 
 
@@ -139,4 +150,5 @@ plt.scatter(stNum,ht,color='b')
 plt.legend(['weight','height'])
 plt.title('Weight & Height Scatter Plot')
 plt.show()
+
 
